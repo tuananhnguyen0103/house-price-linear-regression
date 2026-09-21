@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ước tính giá nhà</title>
+  <meta name="description" content="Nhập thông tin căn nhà, mô hình Linear Regression gợi ý mức giá tham khảo. Mô hình chạy ngay trên trình duyệt, được host bằng GitHub Pages.">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8F%A0%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <h1>Ước tính giá nhà</h1>
+      <p class="lede">Nhập thông tin căn nhà, mô hình Linear Regression sẽ gợi ý một mức giá tham khảo.</p>
+    </div>
+  </header>
+
+  <main class="wrap layout">
+    <section class="card" aria-labelledby="form-title">
+      <h2 id="form-title">Thông tin căn nhà</h2>
+      <form id="house-form" novalidate>
+        <div id="fields" class="fields"></div>
+        <div class="actions">
+          <button type="button" id="reset" class="btn">Đặt lại giá trị mẫu</button>
+        </div>
+      </form>
+      <noscript><p class="notice">Trang này cần bật JavaScript để chạy mô hình.</p></noscript>
+    </section>
+
+    <aside class="card result" aria-labelledby="result-title">
+      <h2 id="result-title">Giá ước tính</h2>
+      <div aria-live="polite">
+        <p class="price" id="price">—</p>
+        <p class="range" id="range"></p>
+        <p class="notice" id="notice" hidden></p>
+      </div>
+      <details class="breakdown">
+        <summary>Xem cách tính</summary>
+        <p class="muted">Linear Regression cộng dồn: hệ số chặn + (giá trị × hệ số) của từng yếu tố. Hệ số chặn âm lớn để bù cho các giá trị lớn như năm xây dựng.</p>
+        <table>
+          <thead><tr><th scope="col">Yếu tố</th><th scope="col" class="num">Giá trị</th><th scope="col" class="num">Đóng góp</th></tr></thead>
+          <tbody id="breakdown-body"></tbody>
+        </table>
+      </details>
+    </aside>
+  </main>
+
+  <footer class="wrap site-footer">
+    <p id="model-info" class="muted"></p>
+    <p class="muted">Chỉ mang tính minh hoạ học thuật, không dùng để định giá thực tế. Dữ liệu là nhà ở Ames, Iowa (Mỹ), giá tính bằng USD, nên không phản ánh thị trường Việt Nam.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+{
+  "model": "LinearRegression",
+  "target": "SalePrice (USD)",
+  "intercept": -562216.9066762486,
+  "features": [
+    {
+      "key": "OverallQual",
+      "coef": 19064.31993915905,
+      "min": 1.0,
+      "max": 10.0,
+      "median": 6.0,
+      "unit": null
+    },
+    {
+      "key": "GrLivArea",
+      "coef": 47.249702817987746,
+      "min": 334.0,
+      "max": 3627.0,
+      "median": 1458.5,
+      "unit": "sqft"
+    },
+    {
+      "key": "TotalBsmtSF",
+      "coef": 38.18339080862509,
+      "min": 0.0,
+      "max": 3206.0,
+      "median": 990.5,
+      "unit": "sqft"
+    },
+    {
+      "key": "GarageCars",
+      "coef": 10043.571935652206,
+      "min": 0.0,
+      "max": 4.0,
+      "median": 2.0,
+      "unit": null
+    },
+    {
+      "key": "YearBuilt",
+      "coef": 238.6433713671577,
+      "min": 1872.0,
+      "max": 2010.0,
+      "median": 1972.0,
+      "unit": null
+    },
+    {
+      "key": "LotArea",
+      "coef": 0.6003529714916525,
+      "min": 1300.0,
+      "max": 215245.0,
+      "median": 9468.5,
+      "unit": "sqft"
+    },
+    {
+      "key": "Fireplaces",
+      "coef": 5616.794492695224,
+      "min": 0.0,
+      "max": 3.0,
+      "median": 1.0,
+      "unit": null
+    },
+    {
+      "key": "TotBath",
+      "coef": 7783.609440655678,
+      "min": 1.0,
+      "max": 6.0,
+      "median": 2.0,
+      "unit": null
+    }
+  ],
+  "metrics": {
+    "r2_test": 0.829,
+    "mae_test": 23140.0,
+    "rmse_test": 29960.0,
+    "n_train": 1164,
+    "n_test": 292
+  },
+  "dataset": {
+    "name": "Ames Housing (OpenML: house_prices)",
+    "rows_used": 1456,
+    "note": "Nhà ở Ames, Iowa (Mỹ), bán 2006-2010, giá USD. Đã bỏ căn có GrLivArea > 4000 sqft."
+  },
+  "trained_on": "2026-09-21",
+  "scikit_learn": "1.3.2"
+}
