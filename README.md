@@ -1,5 +1,7 @@
 # Ước tính giá nhà bằng Linear Regression
 
+> 📘 **Sinh viên lớp 12523W.2 (Học máy cơ bản):** hướng dẫn và yêu cầu đầy đủ cho bài tập lớn nằm ở **[HUONG_DAN_BAI_TAP_LON.md](HUONG_DAN_BAI_TAP_LON.md)**. Repo này chỉ là một ví dụ tham khảo nhỏ (không phải bài mẫu đầy đủ theo đúng cấu trúc boilerplate).
+
 Trang web nhỏ cho người dùng nhập thông tin căn nhà và nhận mức giá tham khảo từ một mô hình **Linear Regression**.
 
 - **Web (chạy thật):** https://tuananhnguyen0103.github.io/house-price-linear-regression/
